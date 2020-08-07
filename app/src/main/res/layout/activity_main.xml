@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <ImageView
+       android:id="@+id/image"
+       android:layout_width="match_parent"
+       android:layout_height="350dp"
+       ></ImageView>
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:textSize="20dp"
+            android:layout_below="@+id/image"
+            android:maxLines="5"
+            ></TextView>
+
+
+
+    <Button
+        android:id="@+id/capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="40dp"
+        android:text="Capture Image"
+        android:textSize="20dp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+
+        ></Button>
+
+    <Button
+        android:id="@+id/detectText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/capture"
+        android:layout_marginTop="20dp"
+        android:text="detect text"
+        android:textSize="20dp"
+        android:background="@android:color/black"
+        android:textColor="@android:color/white"
+
+        ></Button>
+
+
+
+
+</RelativeLayout>
