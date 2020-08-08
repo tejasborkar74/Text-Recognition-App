@@ -19,7 +19,11 @@
             android:layout_height="150dp"
             android:textSize="20dp"
             android:layout_below="@+id/image"
-            android:maxLines="5"
+            android:maxLines="6"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="20dp"
             ></TextView>
 
 
