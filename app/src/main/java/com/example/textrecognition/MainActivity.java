@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
         }).addOnFailureListener(new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
-                Toast.makeText(MainActivity.this , "Error: "+ e.getMessage() , Toast.LENGTH_LONG);
+                Toast.makeText(MainActivity.this , "Error: "+ e.getMessage() , Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -110,15 +110,17 @@ public class MainActivity extends AppCompatActivity {
 
         if(blockList.size() == 0)
         {
-            Toast.makeText(this,"No Text Found in Image" , Toast.LENGTH_LONG);
+            Toast.makeText(MainActivity.this,"No Text Found in Image" , Toast.LENGTH_LONG).show();
         }
         else
         {
+            String text="";
             for(FirebaseVisionText.Block block : firebaseVisionText.getBlocks())
             {
-                String text = block.getText();
-                textView.setText(text);
+                text = text + block.getText();
+
             }
+            textView.setText(text);
         }
 
     }
